@@ -1,15 +1,12 @@
-import { createBrowserSupabaseClient } from '@supabase/auth-helpers-nextjs'
-import { SessionContextProvider } from '@supabase/auth-helpers-react'
-import { useState } from 'react'
-import '../styles/globals.css'
+import '@/styles/globals.css';
+import { Poppins } from 'next/font/google';
 
-function MyApp({ Component, pageProps }) {
-  const [supabaseClient] = useState(() => createBrowserSupabaseClient())
+const poppins = Poppins({ subsets: ['latin'], weight: ['400', '600'] });
+
+export default function App({ Component, pageProps }) {
   return (
-    <SessionContextProvider supabaseClient={supabaseClient} initialSession={pageProps.initialSession}>
+    <main className={poppins.className}>
       <Component {...pageProps} />
-    </SessionContextProvider>
-  )
+    </main>
+  );
 }
-
-export default MyApp

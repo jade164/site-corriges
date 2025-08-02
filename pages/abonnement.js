@@ -1,9 +1,10 @@
+import Layout from '../components/Layout';
+
 export default function Abonnement() {
   return (
-    <main className="p-8">
-      <h2 className="text-xl font-bold">Abonnement mensuel</h2>
-      <p className="mt-4">Pour accéder aux corrigés, abonnez-vous pour 5€/mois.</p>
-      <button className="mt-4 px-4 py-2 bg-purple-600 text-white">Payer avec Stripe (bientôt)</button>
-    </main>
-  )
+    <Layout>
+      <h2 className="text-2xl font-semibold text-blue-700 mb-4">Abonnement</h2>
+      <p className="text-gray-700">Contenu à venir pour la section abonnement.</p>
+    </Layout>
+  );
 }
